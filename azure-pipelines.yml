@@ -7,13 +7,10 @@ trigger:
 - master
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'windows-2019'
 
-container: ubuntu:18.04
-
-variables:
-  buildConfiguration: 'Release'
+container: mcr.microsoft.com/windows/servercore:ltsc2019
 
 steps:
-- script: printenv
+- script: set
 
